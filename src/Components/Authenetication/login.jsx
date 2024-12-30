@@ -53,7 +53,7 @@ export function Login() {
 
                     <label className="label2" htmlFor="password">Password</label>
                     <input className="enter20" type="password" id="password" placeholder="Enter Your password"  value={password}  onChange={(e) => setPassword(e.target.value)}  />
-                    <button type="button" id="forgetbtn">
+                    <button type="button" id="forgetbtn" onClick={() =>  navigate('/forget')}>
                         Forget Password?
                     </button>
                     
