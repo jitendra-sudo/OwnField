@@ -3,12 +3,61 @@
     padding: 0;
     box-sizing: border-box;
 }
-#headering{
-    /* border-bottom: 3px solid black; */
-    box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
-    /* border-radius: 10px; */
+
+
+#navbarHome{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    height: 100vh;
     background-color: rgb(205, 223, 220);
+    z-index: 1000;
+    overflow-y: auto;
 }
+#navbarHome button{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    padding: 8px;
+    background:none ;
+    border: none;
+   
+}
+#navbarHome button:hover{
+        background-color: rgba(0, 0, 0, 0.24);
+}
+
+
+#navbarHome .headPhoto{
+    display: none;
+}
+#navbarHome .toggleSidebar img{
+    width: 30px;
+    filter: invert();
+}
+#homePage{
+    display: flex;
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+
+#headering{
+    box-shadow: rgba(0, 0, 0, 0.34)0px 3px 8px;
+    background-color: rgb(205, 223, 220);
+    /* border: 5px solid; */
+    position: fixed;
+    box-sizing: border-box;
+      
+    width: 96%;
+}
+
 .header-container{
     display: flex;
     justify-content: space-between;
@@ -22,6 +71,7 @@
 
 #H-Manu img {
     width: 25px;
+    
 }
 
 #H-Manu button {
@@ -35,6 +85,7 @@
 }
 #H-Search #search{
     background: none;
+    outline: none;
 }
 
 #H-Search img {
@@ -65,7 +116,7 @@
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 16px 0 0 16px;
-    padding: 5.5px 15px;
+    padding: 6px 15px;
     font-weight: bold;
 }
 
@@ -75,7 +126,7 @@
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 0 16px 16px 0;
-    padding: 5px 15px;
+    padding: 6px 15px;
     background: none;
     cursor: pointer;
 }
@@ -108,6 +159,7 @@
 
 #H-Manu {
     display: flex;
+    margin-top: 15px;
     align-items: center;
 }
 
@@ -163,23 +215,26 @@
   } 
 
   /* mian Section */
-  main {
+  #main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding-left:100px;
-    padding-right: 30px;
-    width: 100%; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    margin-top: 50px;
+    width: 100%;
+    background-color: rgba(224, 240, 238, 0.14);
 }
 
 #Main-Container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    margin-left: 100px;
-      
-    width: 100%; 
+    gap: 20px;
+    width: 100%;
+    
+    /* padding: 0 8px; */
 
 }
 
@@ -196,9 +251,9 @@
 }
 #Main-Container .M-Img img {
     width: 100%;
-    height: 170px; 
+    height: 180px; 
     object-fit: cover; 
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -254,3 +309,4 @@
     color: red;
     font-weight: bold;
 }
+

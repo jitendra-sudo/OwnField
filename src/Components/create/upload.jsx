@@ -69,16 +69,30 @@ export function Create() {
       alert("Stock and price must be numeric values.");
       return;
     }
-
-    const formData = { Title: title, Description: description, Stock: Number(stock), Price: Number(price), Location: location, Files: images};
+    const formData = new FormData();
+    formData.append("Title", title);
+    formData.append("Description", description);
+    formData.append("Stock", Number(stock));
+    formData.append("Price", Number(price));
+    formData.append("Location", location);
+    images.forEach((file, index) => {
+      if (file) {
+        formData.append(`File${index}`, file); 
+      }
+    });
 
     try {
-      const response = await axios.post( "https://ownfield-f0187-default-rtdb.firebaseio.com/public.json", formData );
+      const response = await axios.post(
+        "https://ownfield-f0187-default-rtdb.firebaseio.com/public.json",
+        formData,
+        { headers: { "Content-Type": "application/json" } }
+      )
+      
       console.log(response.data);
          navigate("/home");
         alert("Product uploaded successfully!");
-    } catch (error) {
-      console.error(error);
+    } catch{
+     
       alert("An error occurred while uploading the product.");
     }
   };
