@@ -57,5 +57,5 @@ Empowering farmers to sell their crops directly to clients, eliminating intermed
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone[ https://github.com/your-username/ownfield.git](https://github.com/jitendra-sudo/OwnField)
+   git clone https://github.com/jitendra-sudo/OwnField
    cd ownfield
