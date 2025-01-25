@@ -34,17 +34,7 @@ Empowering farmers to sell their crops directly to clients, eliminating intermed
 - React.js
 - Tailwind CSS / Material-UI
 
-### Backend
-- Node.js
-- Express.js
 
-### Database
-- MongoDB / PostgreSQL
-
-### Other Tools
-- RESTful APIs
-- Payment Gateway Integration
-- Web Hosting: Netlify, Vercel, or AWS
 
 ---
 
